@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaini+Purva&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+
+
 /* General styling adjustments */
 body {
     margin: 0;
@@ -24,9 +29,19 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px 5%;
+    padding: 15px 5%;
+    /* background-color: #e2cfc7; */
+    background: linear-gradient(to right, #f3904f, #3b4371);
+    font-size: 18px;
+}
+
+.hindi-font{
+    font-family: 'Jaini Purva', serif;
+}
+.english-font{
+    font-family: 'JetBrains Mono', monospace;
 }
 
 /* Logo styling (now a clickable link) */
@@ -94,17 +109,22 @@ nav {
 .nav-links .dropdown-content {
     display: none;
     position: absolute;
+    top: 25px;
     background-color: white;
     min-width: 160px;
+    height: 150px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 1;
     list-style: none;
     padding: 0;
+    background: linear-gradient(to right, #60526a, #3b4371);
+    border-radius: 10px;
+    border: 1px solid black;
 }
 
 .nav-links .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 12px 0px 12px 0px;
     text-decoration: none;
     display: block;
 }
@@ -113,16 +133,17 @@ nav {
     display: block;
 }
 
-.nav-links .dropdown-content a:hover {
+/* .nav-links .dropdown-content a:hover {
     background-color: #f1f1f1;
-}
+} */
 
 .btn-contact {
-    background-color: white;
+    /* background: linear-gradient(to right, #d1913c, #ffd194); */
+    background-color: none;
     color: black;
     padding: 15px 30px;
     border: 3px solid black;
-    border-radius: 0;
+    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
@@ -150,6 +171,17 @@ nav {
     z-index: 1;
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust the last value (0.5) to control darkness */
+    z-index: -1;
+}
+
 .hero h1 {
     font-size: 70px;
     font-weight: bold;
@@ -158,18 +190,29 @@ nav {
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 28px;
     margin: 10px 0; 
     color: white;
     font-weight: bold;
-    
 }
 
 .hero h2 {
-    font-size: 25px;
+    font-size: 38px;
     color: white;
     font-weight: bolder;
-    
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {
@@ -178,15 +221,18 @@ nav {
     padding: 10px 20px;
     text-decoration: none;
     font-size: 18px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
+    /* transition: padding 0.3s ease-in-out; */
     margin-top: 20px;
     font-size: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 .btn:is(:focus,:hover) {
     background-color: #E5A186;
     border-radius: #E5A186;
-    padding: 20px 30px;
+    /* padding:15px 30px; */
     color: white;
 }
 
